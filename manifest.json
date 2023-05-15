@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Chat13",
+  "version": "1.0",
+  "description": "Transforms inputs and, on click, chat messages to rot13 for chatgpt",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://chat.openai.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
