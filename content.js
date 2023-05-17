@@ -37,7 +37,7 @@ document.addEventListener("click", (e) => {
   if (e.target.tagName === "TEXTAREA") {
     addButton();
   }
-  if (e.target.tagName === "P") {
+  if (e.target.tagName === "P" || ((e.target.tagName === "DIV") && e.target.classList.contains("whitespace-pre-wrap"))) {
     if (e.target.classList.contains("rot13")) {
       e.target.classList.remove("rot13");
       e.target.innerHTML = e.target.getAttribute("data-original");
